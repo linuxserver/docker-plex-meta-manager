@@ -26,7 +26,7 @@ param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "<path to data>", desc: "Local path for plex-meta-manager config files." }
+  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Local path for plex-meta-manager config files." }
 param_usage_include_ports: false
 param_device_map: false
 cap_add_param: false
