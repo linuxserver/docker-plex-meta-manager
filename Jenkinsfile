@@ -30,12 +30,12 @@ pipeline {
     DIST_IMAGE = 'alpine'
     MULTIARCH='true'
     CI='true'
-    CI_WEB='true'
-    CI_PORT='8080'
-    CI_SSL='false'
+    CI_WEB='false'
+    CI_PORT=''
+    CI_SSL=''
     CI_DELAY='120'
-    CI_DOCKERENV='TZ=US/Pacific'
-    CI_AUTH='user:password'
+    CI_DOCKERENV='TZ=Europe/London'
+    CI_AUTH=''
     CI_WEBPATH=''
   }
   stages {
