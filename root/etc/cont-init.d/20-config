@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bash
+
+if [ -n "$PMM_CONFIG" ]; then
+    PMM_CONFIG=/config/config.yml
+fi
+
+# permissions
+chown -R abc:abc \
+    /config
+
