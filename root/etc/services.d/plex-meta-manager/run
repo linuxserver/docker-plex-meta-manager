@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bash
 
 exec \
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py
+    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${PMM_CONFIG:-/config/config.yml}" --time "${PMM_TIME:-03:00}"

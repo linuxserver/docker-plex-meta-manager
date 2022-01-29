@@ -1,14 +1,11 @@
 #!/usr/bin/with-contenv bash
 
-if [ -n "$PMM_CONFIG" ]; then
-    PMM_CONFIG="/config/config.yml"
-fi
-
-if [ -n "$PMM_TIME" ]; then
-    PMM_TIME="03:00"
+# halt startup if no config file is found
+if [ ! -e "${PMM_CONFIG}" ]; then
+    echo "No config file found at ${PMM_CONFIG}, halting init."
+    sleep infinity
 fi
 
 # permissions
 chown -R abc:abc \
     /config
-
