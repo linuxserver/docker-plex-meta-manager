@@ -1,11 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-# halt startup if no config file is found
-if [ ! -e "${PMM_CONFIG}" ]; then
-    echo "No config file found at ${PMM_CONFIG}, halting init."
-    sleep infinity
-fi
-
 # permissions
 chown -R abc:abc \
     /config
