@@ -42,7 +42,7 @@ Find us at:
 
 [Plex-meta-manager](https://github.com/meisnate12/Plex-Meta-Manager) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki.
 
-[![plex-meta-manager](False)](https://github.com/meisnate12/Plex-Meta-Manager)
+[![plex-meta-manager](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-meta-manager.png)](https://github.com/meisnate12/Plex-Meta-Manager)
 
 ## Supported Architectures
 
