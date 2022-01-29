@@ -40,9 +40,9 @@ Find us at:
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-plex-meta-manager%2Fjob%2Fmain%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-plex-meta-manager/job/main/)
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fplex-meta-manager%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/plex-meta-manager/latest/index.html)
 
-[Plex-meta-manager](http://plex-meta-manager.org/) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki.
+[Plex-meta-manager](https://github.com/meisnate12/Plex-Meta-Manager) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki.
 
-[![plex-meta-manager](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-meta-manager-banner.png)](http://plex-meta-manager.org/)
+[![plex-meta-manager](False)](https://github.com/meisnate12/Plex-Meta-Manager)
 
 ## Supported Architectures
 
@@ -83,11 +83,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - PMM_CONFIG=/config/custom_config.yml #optional
-      - PMM_TIME=03:00,15:00 #optional
-      - PMM_RUN=True #optional
-      - PMM_TEST=True #optional
-      - PMM_NO_MISSING=True #optional
+      - PMM_CONFIG=/config/config.yml #optional
+      - PMM_TIME=03:00 #optional
+      - PMM_RUN=False #optional
+      - PMM_TEST=False #optional
+      - PMM_NO_MISSING=False #optional
     volumes:
       - <path to data>:/config
     restart: unless-stopped
@@ -101,11 +101,11 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e PMM_CONFIG=/config/custom_config.yml `#optional` \
-  -e PMM_TIME=03:00,15:00 `#optional` \
-  -e PMM_RUN=True `#optional` \
-  -e PMM_TEST=True `#optional` \
-  -e PMM_NO_MISSING=True `#optional` \
+  -e PMM_CONFIG=/config/config.yml `#optional` \
+  -e PMM_TIME=03:00 `#optional` \
+  -e PMM_RUN=False `#optional` \
+  -e PMM_TEST=False `#optional` \
+  -e PMM_NO_MISSING=False `#optional` \
   -v <path to data>:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/plex-meta-manager
@@ -120,11 +120,11 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
-| `-e PMM_CONFIG=/config/custom_config.yml` | Specify a custom config file to use. |
-| `-e PMM_TIME=03:00,15:00` | Comma-separated list of times to update each day. Format: `HH:MM`. |
-| `-e PMM_RUN=True` | Run without the scheduler. |
-| `-e PMM_TEST=True` | Run in debug mode with only collections that have `test: true`. |
-| `-e PMM_NO_MISSING=True` | Run without any of the missing movie/show functions. |
+| `-e PMM_CONFIG=/config/config.yml` | Specify a custom config file to use. |
+| `-e PMM_TIME=03:00` | Comma-separated list of times to update each day. Format: `HH:MM`. |
+| `-e PMM_RUN=False` | Set to `True` to run without the scheduler. |
+| `-e PMM_TEST=False` | Set to `True` to run in debug mode with only collections that have `test: true`. |
+| `-e PMM_NO_MISSING=False` | Set to `True` to run without any of the missing movie/show functions. |
 | `-v /config` | Local path for plex-meta-manager config files. |
 
 ## Environment variables from files (Docker secrets)

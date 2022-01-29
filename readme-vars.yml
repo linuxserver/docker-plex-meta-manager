@@ -2,8 +2,8 @@
 
 # project information
 project_name: plex-meta-manager
-project_url: "http://plex-meta-manager.org/"
-project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-meta-manager-banner.png"
+project_url: "https://github.com/meisnate12/Plex-Meta-Manager"
+project_logo: false
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_blurb_optional_extras_enabled: false
@@ -34,11 +34,11 @@ cap_add_param: false
 # optional container parameters
 opt_param_usage_include_env: true
 opt_param_env_vars:
-  - { env_var: "PMM_CONFIG", env_value: "/config/custom_config.yml", desc: "Specify a custom config file to use." }
-  - { env_var: "PMM_TIME", env_value: "03:00,15:00", desc: "Comma-separated list of times to update each day. Format: `HH:MM`." }
-  - { env_var: "PMM_RUN", env_value: "True", desc: "Run without the scheduler." } 
-  - { env_var: "PMM_TEST", env_value: "True", desc: "Run in debug mode with only collections that have `test: true`." } 
-  - { env_var: "PMM_NO_MISSING", env_value: "True", desc: "Run without any of the missing movie/show functions." }   
+  - { env_var: "PMM_CONFIG", env_value: "/config/config.yml", desc: "Specify a custom config file to use." }
+  - { env_var: "PMM_TIME", env_value: "03:00", desc: "Comma-separated list of times to update each day. Format: `HH:MM`." }
+  - { env_var: "PMM_RUN", env_value: "False", desc: "Set to `True` to run without the scheduler." } 
+  - { env_var: "PMM_TEST", env_value: "False", desc: "Set to `True` to run in debug mode with only collections that have `test: true`." } 
+  - { env_var: "PMM_NO_MISSING", env_value: "False", desc: "Set to `True` to run without any of the missing movie/show functions." }   
 opt_param_usage_include_vols: false
 opt_param_usage_include_ports: false
 opt_param_device_map: false
