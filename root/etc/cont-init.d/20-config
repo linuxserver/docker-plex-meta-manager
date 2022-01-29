@@ -1,7 +1,11 @@
 #!/usr/bin/with-contenv bash
 
 if [ -n "$PMM_CONFIG" ]; then
-    PMM_CONFIG=/config/config.yml
+    PMM_CONFIG="/config/config.yml"
+fi
+
+if [ -n "$PMM_TIME" ]; then
+    PMM_TIME="03:00"
 fi
 
 # permissions
