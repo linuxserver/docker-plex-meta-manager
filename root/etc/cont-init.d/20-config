@@ -2,7 +2,7 @@
 
 # halt startup if no config file is found
 if [ ! -e "${PMM_CONFIG}" ]; then
-    echo "No config file found at ""${PMM_CONFIG}"", halting init."
+    echo "No config file found at ${PMM_CONFIG}, halting init."
     sleep infinity
 fi
 
