@@ -1,0 +1,31 @@
+---
+
+# jenkins variables
+project_name: docker-plex-meta-manager
+external_type: github_stable
+release_type: stable
+release_tag: latest
+ls_branch: main
+repo_vars:
+  - EXT_GIT_BRANCH = 'master'
+  - EXT_USER = 'meisnate12'
+  - EXT_REPO = 'Plex-Meta-Manager'
+  - BUILD_VERSION_ARG = 'PMM_VERSION'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-plex-meta-manager'
+  - CONTAINER_NAME = 'plex-meta-manager'
+  - DOCKERHUB_IMAGE = 'linuxserver/plex-meta-manager'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/plex-meta-manager'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/plex-meta-manager'
+  - DIST_IMAGE = 'alpine'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='false'
+  - CI_PORT=''
+  - CI_SSL=''
+  - CI_DELAY='120'
+  - CI_DOCKERENV='TZ=Europe/London'
+  - CI_AUTH=''
+  - CI_WEBPATH=''
+sponsor_links:
+  - { name: "Plex-Meta-Manager", url: "https://github.com/sponsors/meisnate12" }
