@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+
+# permissions
+chown -R abc:abc \
+    /config
+
+if [[ $PMM_RUN = "True" ]]; then
+    touch /etc/services.d/plex-meta-manager/down
+else
+    rm /etc/cont-init.d/55-oneshot
+    echo "#!/usr/bin/with-contenv bash" > /etc/cont-init.d/55-oneshot
+    chmod +x /etc/cont-init.d/55-oneshot
+fi
