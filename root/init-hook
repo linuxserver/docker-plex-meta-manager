@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+
+if [[ $PMM_RUN = "True" ]]; then
+    rm -rf /etc/s6-overlay/s6-rc.d/svc-pmm
+    rm -rf /etc/s6-overlay/s6-rc.d/user/contents.d/svc-pmm
+    rm -rf /etc/s6-overlay/s6-rc.d/init-config-end/dependencies.d/init-pmm-config
+    touch /etc/s6-overlay/s6-rc.d/user2/contents.d/init-pmm-shutdown
+else
+    rm -rf /etc/s6-overlay/s6-rc.d/init-pmm-oneshot
+    rm -rf /etc/s6-overlay/s6-rc.d/user/contents.d/init-pmm-oneshot
+fi
