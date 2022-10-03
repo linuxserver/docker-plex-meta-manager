@@ -9,3 +9,6 @@ else
     rm -rf /etc/s6-overlay/s6-rc.d/init-pmm-oneshot
     rm -rf /etc/s6-overlay/s6-rc.d/user/contents.d/init-pmm-oneshot
 fi
+
+exec \
+    /docker-mods
