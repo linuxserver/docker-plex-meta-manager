@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.15
+FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.16
 
 # set version label
 ARG BUILD_DATE
@@ -8,6 +8,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thespad"
 
 # environment settings
+ENV S6_STAGE2_HOOK=/init-hook
 ENV HOME="/config" \
 PYTHONIOENCODING=utf-8
 
@@ -41,9 +42,9 @@ RUN \
     /app/pmm --strip-components=1 && \
   cd /app/pmm && \
   python3 -m pip install --upgrade pip && \
-  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.15/ \
+  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.16/ \
     wheel && \
-  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.15/ -r requirements.txt && \
+  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.16/ -r requirements.txt && \
   pip3 cache purge && \
   echo "**** cleanup ****" && \
   ln -s \

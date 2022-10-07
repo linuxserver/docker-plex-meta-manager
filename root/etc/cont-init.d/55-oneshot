@@ -1,8 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-cd / || exit 1
-
-s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${PMM_CONFIG:-/config/config.yml}" --run
-
-exec \
-    s6-svscanctl -t /var/run/s6/services
