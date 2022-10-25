@@ -5,8 +5,8 @@ IFS="|" read -r -a CLI_OPTIONS <<< "$CLI_OPTIONS_STRING"
 cd / || exit 1
 
 # halt startup if no config file is found
-if [[ -n ${PMM_CONFIG} ]]; then
-    CONFIG_FILE=${PMM_CONFIG}
+if [[ -n "${PMM_CONFIG}" ]]; then
+    CONFIG_FILE="${PMM_CONFIG}"
 elif echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; then
     CONFIG_FILE=$(echo "${CLI_OPTIONS[@]}" | grep -Po '([\s]|^)(--config|-c)([\s])\K(.+\/[^\/]+)\.(yml|yaml)')
 else

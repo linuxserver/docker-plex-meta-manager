@@ -2,7 +2,7 @@
 
 IFS="|" read -r -a CLI_OPTIONS <<< "$CLI_OPTIONS_STRING"
 
-if [[ $(tr "[:upper:]" "[:lower:]" <<<"${PMM_RUN}") = "true" ]] || echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--run|-r)([\s]|$)'; then
+if [[ $(tr "[:upper:]" "[:lower:]" <<<"${PMM_RUN}") = "true" ]] || echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--run|--tests|--run-tests|--run-collections|--run-libraries|--run-metadata-files|--resume|-r|-rm|-rl|-rc|-rt|re)([\s]|$)'; then
     rm -rf /etc/s6-overlay/s6-rc.d/svc-pmm
     rm -rf /etc/s6-overlay/s6-rc.d/user/contents.d/svc-pmm
     rm -rf /etc/s6-overlay/s6-rc.d/init-config-end/dependencies.d/init-pmm-config
