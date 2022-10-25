@@ -1,12 +1,14 @@
 #!/usr/bin/with-contenv bash
 
+IFS="|" read -r -a CLI_OPTIONS <<< "$CLI_OPTIONS_STRING"
+
 cd / || exit 1
 
 # halt startup if no config file is found
 if [[ -n ${PMM_CONFIG} ]]; then
     CONFIG_FILE=${PMM_CONFIG}
-elif echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; then
-    CONFIG_FILE=$(echo "${CLI_OPTIONS}" | grep -Po '([\s]|^)(--config|-c)([\s])\K(.+\/[^\/]+)\.(yml|yaml)')
+elif echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; then
+    CONFIG_FILE=$(echo "${CLI_OPTIONS[@]}" | grep -Po '([\s]|^)(--config|-c)([\s])\K(.+\/[^\/]+)\.(yml|yaml)')
 else
     CONFIG_FILE="/config/config.yml"
 fi
@@ -17,12 +19,12 @@ if [[ -n "${CONFIG_FILE}" ]] && [[ ! -e "${CONFIG_FILE}" ]]; then
     s6-rc -bad change
 fi
 
-if { echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--run|-r)([\s]|$)'; } && { echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; }; then
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py ${CLI_OPTIONS}
-elif echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--run|-r)([\s]|$)'; then
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${CONFIG_FILE}" ${CLI_OPTIONS}
-elif echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; then
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --run ${CLI_OPTIONS}
+if { echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--run|-r)([\s]|$)'; } && { echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; }; then
+    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py "${CLI_OPTIONS[@]}"
+elif echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--run|-r)([\s]|$)'; then
+    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${CONFIG_FILE}" "${CLI_OPTIONS[@]}"
+elif echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; then
+    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --run "${CLI_OPTIONS[@]}"
 else
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --run --config "${CONFIG_FILE}" ${CLI_OPTIONS}
+    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --run --config "${CONFIG_FILE}" "${CLI_OPTIONS[@]}"
 fi
