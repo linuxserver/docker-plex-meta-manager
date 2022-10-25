@@ -13,7 +13,6 @@ fi
 
 if [[ -n "${CONFIG_FILE}" ]] && [[ ! -e "${CONFIG_FILE}" ]]; then
     echo "No config file found at ${CONFIG_FILE}, halting init."
-    echo "[ls.io-init] done."
     s6-rc -bad change
 fi
 
