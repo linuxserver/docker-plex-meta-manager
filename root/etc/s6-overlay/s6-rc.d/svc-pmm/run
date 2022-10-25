@@ -16,16 +16,16 @@ if [[ -n "${CONFIG_FILE}" ]] && [[ ! -e "${CONFIG_FILE}" ]]; then
     s6-rc -bad change
 fi
 
-if { echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--time|-t)([^\S])(.+\/[^\/]+)\.(yml|yaml)'; } && { echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--config|-c)([^\S])(.+\/[^\/]+)\.(yml|yaml)'; }; then
+if { echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--time|-t)([^\S])'; } && { echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--config|-c)([^\S])(.+\/[^\/]+)\.(yml|yaml)'; }; then
     exec \
-        s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py ${CLI_OPTIONS:+"$CLI_OPTIONS"}
-elif echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--time|-t)([^\S])(.+\/[^\/]+)\.(yml|yaml)'; then
+        s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py ${CLI_OPTIONS}
+elif echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--time|-t)([^\S])'; then
     exec \
-        s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${CONFIG_FILE}" ${CLI_OPTIONS:+"$CLI_OPTIONS"}
+        s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${CONFIG_FILE}" ${CLI_OPTIONS}
 elif echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--config|-c)([^\S])(.+\/[^\/]+)\.(yml|yaml)'; then
     exec \
-        s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --time "${PMM_TIME:-03:00}" ${CLI_OPTIONS:+"$CLI_OPTIONS"}
+        s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --time "${PMM_TIME:-03:00}" ${CLI_OPTIONS}
 else
     exec \
-        s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${CONFIG_FILE}" --time "${PMM_TIME:-03:00}" ${CLI_OPTIONS:+"$CLI_OPTIONS"}
+        s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${CONFIG_FILE}" --time "${PMM_TIME:-03:00}" ${CLI_OPTIONS}
 fi
