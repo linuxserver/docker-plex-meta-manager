@@ -5,8 +5,8 @@ cd / || exit 1
 # halt startup if no config file is found
 if [[ -n ${PMM_CONFIG} ]]; then
     CONFIG_FILE=${PMM_CONFIG}
-elif echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--config|-c)([^\S])(.+\/[^\/]+)\.(yml|yaml)'; then
-    CONFIG_FILE=$(echo "${CLI_OPTIONS}" | grep -Po '[\s]?(--config|-c)([^\S])\K(.+\/[^\/]+)\.(yml|yaml)')
+elif echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; then
+    CONFIG_FILE=$(echo "${CLI_OPTIONS}" | grep -Po '([\s]|^)(--config|-c)([\s])\K(.+\/[^\/]+)\.(yml|yaml)')
 else
     CONFIG_FILE="/config/config.yml"
 fi
@@ -16,13 +16,13 @@ if [[ -n "${CONFIG_FILE}" ]] && [[ ! -e "${CONFIG_FILE}" ]]; then
     s6-rc -bad change
 fi
 
-if { echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--time|-t)([^\S])'; } && { echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--config|-c)([^\S])(.+\/[^\/]+)\.(yml|yaml)'; }; then
+if { echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--time|-t)([\s])'; } && { echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; }; then
     exec \
         s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py ${CLI_OPTIONS}
-elif echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--time|-t)([^\S])'; then
+elif echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--time|-t)([\s])'; then
     exec \
         s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${CONFIG_FILE}" ${CLI_OPTIONS}
-elif echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--config|-c)([^\S])(.+\/[^\/]+)\.(yml|yaml)'; then
+elif echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; then
     exec \
         s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --time "${PMM_TIME:-03:00}" ${CLI_OPTIONS}
 else

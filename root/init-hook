@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-if [[ $(tr "[:upper:]" "[:lower:]" <<<"${PMM_RUN}") = "true" ]] || echo "${CLI_OPTIONS}" | grep -qPo '[\s]?(--run|-r)([^\S]|$)'; then
+if [[ $(tr "[:upper:]" "[:lower:]" <<<"${PMM_RUN}") = "true" ]] || echo "${CLI_OPTIONS}" | grep -qPo '([\s]|^)(--run|-r)([\s]|$)'; then
     rm -rf /etc/s6-overlay/s6-rc.d/svc-pmm
     rm -rf /etc/s6-overlay/s6-rc.d/user/contents.d/svc-pmm
     rm -rf /etc/s6-overlay/s6-rc.d/init-config-end/dependencies.d/init-pmm-config
