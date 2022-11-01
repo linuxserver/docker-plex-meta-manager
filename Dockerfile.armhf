@@ -24,7 +24,7 @@ RUN \
     libzen-dev \
     python3-dev && \
   apk add  -U --update --no-cache \
-    curl \
+    grep \
     libjpeg \
     libxslt \    
     python3 \
@@ -61,3 +61,5 @@ COPY root/ /
 
 # ports and volumes
 VOLUME /config
+
+ENTRYPOINT ["/init-pmm"]
