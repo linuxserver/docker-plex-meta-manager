@@ -53,7 +53,7 @@ app_setup_block_enabled: true
 app_setup_block: |
   There is a [walkthrough](https://metamanager.wiki/en/latest/home/guides/docker.html#setting-up-the-initial-config-file) available to help get you up and running.
 
-  This image supports all of the environment variables listed [here](https://metamanager.wiki/en/latest/home/environmental.html)
+  This image supports all of the environment variables listed [here](https://metamanager.wiki/en/latest/home/environmental.html) and all commandline arguments.
 
   To perform a one-time run use `docker run` (or `docker-compose run`) with the `--rm` and `-e PMM_RUN=True` arguments. This will cause the container to process your config immediately instead of waiting for the scheduled time, and delete the old container after completion.
 
