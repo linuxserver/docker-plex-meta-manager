@@ -15,7 +15,10 @@ available_architectures:
   - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
 
 # development version
-development_versions: false
+development_versions: true
+development_versions_items:
+  - { tag: "latest", desc: "Stable releases." }
+  - { tag: "develop", desc: "Latest commits from the develop branch" }
 
 # container parameters
 common_param_env_vars_enabled: true
@@ -50,7 +53,7 @@ app_setup_block_enabled: true
 app_setup_block: |
   There is a [walkthrough](https://metamanager.wiki/en/latest/home/guides/docker.html#setting-up-the-initial-config-file) available to help get you up and running.
 
-  This image supports all of the environment variables listed [here](https://metamanager.wiki/en/latest/home/environmental.html)
+  This image supports all of the environment variables listed [here](https://metamanager.wiki/en/latest/home/environmental.html) and all commandline arguments.
 
   To perform a one-time run use `docker run` (or `docker-compose run`) with the `--rm` and `-e PMM_RUN=True` arguments. This will cause the container to process your config immediately instead of waiting for the scheduled time, and delete the old container after completion.
 
@@ -58,6 +61,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "08.11.22:", desc: "Add develop branch." }
   - { date: "25.10.22:", desc: "Support commandline args and relative paths." }
   - { date: "03.10.22:", desc: "Rebase to Alpine 3.16, migrate to s6v3." }
   - { date: "30.01.22:", desc: "Initial Release." }
