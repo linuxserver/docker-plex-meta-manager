@@ -2,6 +2,8 @@
 
 IFS="|" read -r -a CLI_OPTIONS <<< "$CLI_OPTIONS_STRING"
 
+export PMM_LINUXSERVER=True
+
 cd / || exit 1
 
 # halt startup if no config file is found
