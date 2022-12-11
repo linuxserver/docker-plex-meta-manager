@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.16
+FROM ghcr.io/linuxserver/baseimage-alpine:3.17
 
 # set version label
 ARG BUILD_DATE
@@ -18,7 +18,6 @@ RUN \
     build-base \
     gcc \
     g++ \
-    jq \
     libffi-dev \
     libxml2-dev \
     libzen-dev \
@@ -41,15 +40,13 @@ RUN \
     /tmp/pmm.tar.gz -C \
     /app/pmm --strip-components=1 && \
   cd /app/pmm && \
-  python3 -m pip install --upgrade pip && \
-  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.16/ \
+  python3 -m ensurepip && \
+  pip3 install -U --no-cache-dir \
+    pip \
     wheel && \
   pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.16/ -r requirements.txt && \
   pip3 cache purge && \
   echo "**** cleanup ****" && \
-  ln -s \
-    /usr/bin/python3 \
-    /usr/bin/python && \
   apk del --purge \
     build-dependencies && \
   rm -rf \
