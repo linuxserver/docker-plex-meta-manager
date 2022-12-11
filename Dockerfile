@@ -46,9 +46,6 @@ RUN \
   pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.17/ -r requirements.txt && \
   pip3 cache purge && \
   echo "**** cleanup ****" && \
-  ln -s \
-    /usr/bin/python3 \
-    /usr/bin/python && \
   apk del --purge \
     build-dependencies && \
   rm -rf \
