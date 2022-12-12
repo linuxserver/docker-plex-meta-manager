@@ -61,6 +61,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "11.12.22:", desc: "Rebase develop to Alpine 3.17." }
   - { date: "08.11.22:", desc: "Add develop branch." }
   - { date: "25.10.22:", desc: "Support commandline args and relative paths." }
   - { date: "03.10.22:", desc: "Rebase to Alpine 3.16, migrate to s6v3." }
