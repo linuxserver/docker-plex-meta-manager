@@ -18,8 +18,6 @@ RUN \
   echo "**** install packages ****" && \
   apk add -U --update --no-cache --virtual=build-dependencies \
     build-base \
-    gcc \
-    g++ \
     libffi-dev \
     libxml2-dev \
     libzen-dev \
@@ -31,7 +29,7 @@ RUN \
     python3 \
     py3-pip && \
   if [ -z ${PMM_VERSION+x} ]; then \
-    PMM_VERSION=$(curl -s "https://api.github.com/repos/meisnate12/Plex-Meta-Manager/commits/develop" \
+    PMM_VERSION=$(curl -s "https://api.github.com/repos/meisnate12/Plex-Meta-Manager/commits/nightly" \
       | jq -r '. | .sha' | cut -c1-8); \
   fi && \
   mkdir -p /app/pmm && \
@@ -46,7 +44,7 @@ RUN \
   pip3 install -U --no-cache-dir \
     pip \
     wheel && \
-  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.16/ -r requirements.txt && \
+  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.17/ -r requirements.txt && \
   pip3 cache purge && \
   echo "**** cleanup ****" && \
   apk del --purge \

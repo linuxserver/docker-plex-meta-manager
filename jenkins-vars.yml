@@ -4,10 +4,10 @@
 project_name: docker-plex-meta-manager
 external_type: github_commit
 release_type: prerelease
-release_tag: develop
-ls_branch: develop
+release_tag: nightly
+ls_branch: nightly
 repo_vars:
-  - EXT_GIT_BRANCH = 'develop'
+  - EXT_GIT_BRANCH = 'nightly'
   - EXT_USER = 'meisnate12'
   - EXT_REPO = 'Plex-Meta-Manager'
   - BUILD_VERSION_ARG = 'PMM_VERSION'
