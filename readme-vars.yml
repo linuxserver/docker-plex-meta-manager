@@ -19,6 +19,7 @@ development_versions: true
 development_versions_items:
   - { tag: "latest", desc: "Stable releases." }
   - { tag: "develop", desc: "Latest commits from the develop branch" }
+  - { tag: "nightly", desc: "Latest commits from the nightly branch" }
 
 # container parameters
 common_param_env_vars_enabled: true
@@ -61,6 +62,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "05.03.23:", desc: "Add nightly branch." }
   - { date: "11.12.22:", desc: "Rebase master to Alpine 3.17." }
   - { date: "08.11.22:", desc: "Add develop branch." }
   - { date: "25.10.22:", desc: "Support commandline args and relative paths." }
