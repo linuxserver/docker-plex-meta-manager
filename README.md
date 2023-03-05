@@ -66,6 +66,7 @@ This image provides various versions that are available via tags. Please read th
 | :----: | :----: |--- |
 | latest | ✅ | Stable releases. |
 | develop | ✅ | Latest commits from the develop branch |
+| nightly | ✅ | Latest commits from the nightly branch |
 ## Application Setup
 
 There is a [walkthrough](https://metamanager.wiki/en/latest/home/guides/docker.html#setting-up-the-initial-config-file) available to help get you up and running.
@@ -247,6 +248,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.03.23:** - Add nightly branch.
 * **11.12.22:** - Rebase develop to Alpine 3.17.
 * **08.11.22:** - Add develop branch.
 * **25.10.22:** - Support commandline args and relative paths.

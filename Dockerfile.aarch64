@@ -18,8 +18,6 @@ RUN \
   echo "**** install packages ****" && \
   apk add -U --update --no-cache --virtual=build-dependencies \
     build-base \
-    gcc \
-    g++ \
     libffi-dev \
     libxml2-dev \
     libzen-dev \
@@ -46,7 +44,7 @@ RUN \
   pip3 install -U --no-cache-dir \
     pip \
     wheel && \
-  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.16/ -r requirements.txt && \
+  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.17/ -r requirements.txt && \
   pip3 cache purge && \
   echo "**** cleanup ****" && \
   apk del --purge \
