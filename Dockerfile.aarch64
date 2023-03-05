@@ -18,8 +18,6 @@ RUN \
   echo "**** install packages ****" && \
   apk add -U --update --no-cache --virtual=build-dependencies \
     build-base \
-    gcc \
-    g++ \
     libffi-dev \
     libxml2-dev \
     libzen-dev \
