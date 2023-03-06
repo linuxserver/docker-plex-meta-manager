@@ -16,7 +16,7 @@ busybox-binsh           1.35.0-r29             apk
 ca-certificates         20220614-r4            apk     
 ca-certificates-bundle  20220614-r4            apk     
 certifi                 2022.12.7              python  
-charset-normalizer      3.0.1                  python  
+charset-normalizer      3.1.0                  python  
 coreutils               9.1-r0                 apk     
 curl                    7.88.1-r0              apk     
 docopt                  0.6.2                  python  
