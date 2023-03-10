@@ -1,7 +1,7 @@
 NAME                    VERSION                TYPE   
 GitPython               3.1.31                 python  
 Pillow                  9.4.0                  python  
-PlexAPI                 4.13.2                 python  
+PlexAPI                 4.13.4                 python  
 alpine-baselayout       3.4.0-r0               apk     
 alpine-baselayout-data  3.4.0-r0               apk     
 alpine-keys             2.4-r1                 apk     
