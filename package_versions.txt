@@ -45,7 +45,7 @@ libproc                 3.3.17-r2              apk
 libssl3                 3.0.8-r0               apk     
 libstdc++               12.2.1_git20220924-r4  apk     
 libxml2                 2.10.3-r1              apk     
-libxslt                 1.1.37-r0              apk     
+libxslt                 1.1.37-r1              apk     
 linux-pam               1.5.2-r1               apk     
 lxml                    4.9.2                  python  
 mpdecimal               2.5.1-r1               apk     
