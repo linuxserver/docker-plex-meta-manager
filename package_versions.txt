@@ -18,7 +18,7 @@ ca-certificates-bundle  20220614-r4            apk
 certifi                 2022.12.7              python  
 charset-normalizer      3.1.0                  python  
 coreutils               9.1-r0                 apk     
-curl                    7.88.1-r1              apk     
+curl                    8.0.1-r0               apk     
 docopt                  0.6.2                  python  
 gdbm                    1.23-r0                apk     
 gitdb                   4.0.10                 python  
@@ -31,7 +31,7 @@ libbsd                  0.11.7-r0              apk
 libbz2                  1.0.8-r4               apk     
 libc-utils              0.7.2-r3               apk     
 libcrypto3              3.0.8-r3               apk     
-libcurl                 7.88.1-r1              apk     
+libcurl                 8.0.1-r0               apk     
 libexpat                2.5.0-r0               apk     
 libffi                  3.4.4-r0               apk     
 libgcc                  12.2.1_git20220924-r4  apk     
@@ -59,7 +59,7 @@ num2words               0.5.12                 python
 oniguruma               6.9.8-r0               apk     
 pathvalidate            2.5.2                  python  
 pcre2                   10.42-r0               apk     
-pip                     23.0.1                 python  
+pip                     23.1                   python  
 procps                  3.3.17-r2              apk     
 psutil                  5.9.4                  python  
 python                  3.10.11                binary  
