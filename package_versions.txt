@@ -30,7 +30,7 @@ libattr                 2.5.1-r2               apk
 libbsd                  0.11.7-r0              apk     
 libbz2                  1.0.8-r4               apk     
 libc-utils              0.7.2-r3               apk     
-libcrypto3              3.0.8-r3               apk     
+libcrypto3              3.0.8-r4               apk     
 libcurl                 8.0.1-r0               apk     
 libexpat                2.5.0-r0               apk     
 libffi                  3.4.4-r0               apk     
@@ -42,7 +42,7 @@ libjpeg                 9e-r0                  apk
 libjpeg-turbo           2.1.4-r0               apk     
 libmd                   1.0.4-r0               apk     
 libproc                 3.3.17-r2              apk     
-libssl3                 3.0.8-r3               apk     
+libssl3                 3.0.8-r4               apk     
 libstdc++               12.2.1_git20220924-r4  apk     
 libxml2                 2.10.4-r0              apk     
 libxslt                 1.1.37-r1              apk     
@@ -59,7 +59,7 @@ num2words               0.5.12                 python
 oniguruma               6.9.8-r0               apk     
 pathvalidate            2.5.2                  python  
 pcre2                   10.42-r0               apk     
-pip                     23.1                   python  
+pip                     23.1.2                 python  
 procps                  3.3.17-r2              apk     
 psutil                  5.9.4                  python  
 python                  3.10.11                binary  
