@@ -70,9 +70,9 @@ py3-retrying            1.3.3-r3               apk
 py3-setuptools          65.6.0-r0              apk     
 py3-six                 1.16.0-r3              apk     
 pyparsing               3.0.9                  python  
-python                  3.10.11                binary  
+python                  3.10.12                binary  
 python-dotenv           1.0.0                  python  
-python3                 3.10.11-r0             apk     
+python3                 3.10.12-r0             apk     
 readline                8.2.0-r0               apk     
 requests                2.31.0                 python  
 retrying                1.3.4                  python  
@@ -89,7 +89,7 @@ sqlite-libs             3.40.1-r0              apk
 ssl_client              1.35.0-r29             apk     
 tmdbapis                1.2.0                  python  
 tzdata                  2023c-r0               apk     
-urllib3                 2.0.2                  python  
+urllib3                 2.0.3                  python  
 utmps-libs              0.1.2.0-r1             apk     
 wheel                   0.40.0                 python  
 xz                      5.2.9-r0               apk     
