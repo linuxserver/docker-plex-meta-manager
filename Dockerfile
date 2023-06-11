@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.17
+FROM ghcr.io/linuxserver/baseimage-alpine:3.18
 
 # set version label
 ARG BUILD_DATE
@@ -26,8 +26,7 @@ RUN \
     grep \
     libjpeg \
     libxslt \
-    python3 \
-    py3-pip && \
+    python3 && \
   if [ -z ${PMM_VERSION+x} ]; then \
     PMM_VERSION=$(curl -s "https://api.github.com/repos/meisnate12/Plex-Meta-Manager/commits/nightly" \
       | jq -r '. | .sha' | cut -c1-8); \
@@ -40,12 +39,12 @@ RUN \
     /tmp/pmm.tar.gz -C \
     /app/pmm --strip-components=1 && \
   cd /app/pmm && \
-  python3 -m ensurepip && \
-  pip3 install -U --no-cache-dir \
+  python3 -m venv /lsiopy && \
+  pip install -U --no-cache-dir \
     pip \
     wheel && \
-  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.17/ -r requirements.txt && \
-  pip3 cache purge && \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.18/ -r requirements.txt && \
+  pip cache purge && \
   echo "**** cleanup ****" && \
   apk del --purge \
     build-dependencies && \
