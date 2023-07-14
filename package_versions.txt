@@ -1,5 +1,5 @@
 NAME                    VERSION                 TYPE   
-GitPython               3.1.31                  python  
+GitPython               3.1.32                  python  
 Pillow                  10.0.0                  python  
 PlexAPI                 4.14.0                  python  
 alpine-baselayout       3.4.3-r1                apk     
