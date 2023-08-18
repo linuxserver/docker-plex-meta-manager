@@ -66,7 +66,6 @@ pip                         23.2.1                  python
 procps-ng                   4.0.3-r1                apk     
 psutil                      5.9.5                   python  
 pyc                         0.1-r0                  apk     
-python                      3.11.4                  binary  
 python-dotenv               1.0.0                   python  
 python3                     3.11.4-r0               apk     
 python3-pyc                 3.11.4-r0               apk     
