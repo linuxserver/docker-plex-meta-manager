@@ -88,6 +88,6 @@ tmdbapis                    1.2.0                   python
 tzdata                      2023c-r1                apk     
 urllib3                     2.0.4                   python  
 utmps-libs                  0.1.2.1-r1              apk     
-wheel                       0.41.1                  python  
+wheel                       0.41.2                  python  
 xz-libs                     5.4.3-r0                apk     
 zlib                        1.2.13-r1               apk     
