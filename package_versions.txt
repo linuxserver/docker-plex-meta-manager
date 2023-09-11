@@ -1,5 +1,5 @@
 NAME                        VERSION                 TYPE   
-GitPython                   3.1.32                  python  
+GitPython                   3.1.35                  python  
 Pillow                      10.0.0                  python  
 PlexAPI                     4.15.1                  python  
 Simple Launcher Executable  1.1.0.14                dotnet  
