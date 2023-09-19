@@ -1,7 +1,7 @@
 NAME                        VERSION                 TYPE   
 GitPython                   3.1.36                  python  
-Pillow                      10.0.0                  python  
-PlexAPI                     4.15.1                  python  
+Pillow                      10.0.1                  python  
+PlexAPI                     4.15.2                  python  
 Simple Launcher Executable  1.1.0.14                dotnet  
 alpine-baselayout           3.4.3-r1                apk     
 alpine-baselayout-data      3.4.3-r1                apk     
@@ -60,7 +60,7 @@ netcat-openbsd              1.219-r1                apk
 nghttp2-libs                1.55.1-r0               apk     
 num2words                   0.5.12                  python  
 oniguruma                   6.9.8-r1                apk     
-pathvalidate                3.1.0                   python  
+pathvalidate                3.2.0                   python  
 pcre2                       10.42-r1                apk     
 pip                         23.2.1                  python  
 procps-ng                   4.0.4-r0                apk     
@@ -81,7 +81,7 @@ setuptools                  65.5.0                  python
 shadow                      4.13-r4                 apk     
 six                         1.16.0                  python  
 skalibs                     2.13.1.1-r1             apk     
-smmap                       5.0.0                   python  
+smmap                       5.0.1                   python  
 sqlite-libs                 3.41.2-r2               apk     
 ssl_client                  1.36.1-r2               apk     
 tmdbapis                    1.2.0                   python  
