@@ -21,7 +21,7 @@ coreutils                   9.3-r1                  apk
 curl                        8.4.0-r0                apk     
 docopt                      0.6.2                   python  
 gdbm                        1.23-r1                 apk     
-gitdb                       4.0.10                  python  
+gitdb                       4.0.11                  python  
 grep                        3.10-r1                 apk     
 idna                        3.4                     python  
 jq                          1.6-r3                  apk     
