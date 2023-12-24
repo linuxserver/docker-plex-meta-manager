@@ -29,7 +29,7 @@ param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Local path for plex-meta-manager config files." }
+  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
 param_usage_include_ports: false
 param_device_map: false
 cap_add_param: false
@@ -61,6 +61,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - { date: "10.06.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
   - { date: "05.03.23:", desc: "Add nightly branch." }
   - { date: "11.12.22:", desc: "Rebase master to Alpine 3.17." }
