@@ -1,5 +1,5 @@
 NAME                    VERSION                TYPE   
-GitPython               3.1.40                 python  
+GitPython               3.1.41                 python  
 PlexAPI                 4.15.7                 python  
 Simple Launcher         1.1.0.14               dotnet  
 alpine-baselayout       3.4.3-r2               apk     
@@ -54,7 +54,7 @@ libunistring            1.1-r2                 apk
 libxml2                 2.11.6-r0              apk     
 libxslt                 1.1.39-r0              apk     
 linux-pam               1.5.3-r7               apk     
-lxml                    5.0.0                  python  
+lxml                    5.1.0                  python  
 mpdecimal               2.5.1-r2               apk     
 musl                    1.2.4_git20230717-r4   apk     
 musl-utils              1.2.4_git20230717-r4   apk     
@@ -70,6 +70,7 @@ pip                     23.3.2                 python
 procps-ng               4.0.4-r0               apk     
 psutil                  5.9.7                  python  
 pyc                     3.11.6-r1              apk     
+python-dateutil         2.8.2                  python  
 python-dotenv           1.0.0                  python  
 python3                 3.11.6-r1              apk     
 python3-pyc             3.11.6-r1              apk     
