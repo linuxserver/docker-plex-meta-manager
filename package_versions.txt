@@ -66,7 +66,7 @@ oniguruma               6.9.9-r0               apk
 pathvalidate            3.2.0                  python  
 pcre2                   10.42-r2               apk     
 pillow                  10.2.0                 python  
-pip                     23.3.2                 python  
+pip                     24.0                   python  
 procps-ng               4.0.4-r0               apk     
 psutil                  5.9.8                  python  
 pyc                     3.11.6-r1              apk     
@@ -90,7 +90,7 @@ smmap                   5.0.1                  python
 sqlite-libs             3.44.2-r0              apk     
 ssl_client              1.36.1-r15             apk     
 tmdbapis                1.2.6                  python  
-tzdata                  2023d-r0               apk     
+tzdata                  2024a-r0               apk     
 urllib3                 2.2.0                  python  
 utmps-libs              0.1.2.2-r0             apk     
 wheel                   0.42.0                 python  
