@@ -69,11 +69,11 @@ pillow                  10.2.0                 python
 pip                     24.0                   python  
 procps-ng               4.0.4-r0               apk     
 psutil                  5.9.7                  python  
-pyc                     3.11.6-r1              apk     
+pyc                     3.11.8-r0              apk     
 python-dotenv           1.0.0                  python  
-python3                 3.11.6-r1              apk     
-python3-pyc             3.11.6-r1              apk     
-python3-pycache-pyc0    3.11.6-r1              apk     
+python3                 3.11.8-r0              apk     
+python3-pyc             3.11.8-r0              apk     
+python3-pycache-pyc0    3.11.8-r0              apk     
 readline                8.2.1-r2               apk     
 requests                2.31.0                 python  
 retrying                1.3.4                  python  
@@ -90,7 +90,7 @@ sqlite-libs             3.44.2-r0              apk
 ssl_client              1.36.1-r15             apk     
 tmdbapis                1.2.6                  python  
 tzdata                  2024a-r0               apk     
-urllib3                 2.2.0                  python  
+urllib3                 2.2.1                  python  
 utmps-libs              0.1.2.2-r0             apk     
 wheel                   0.42.0                 python  
 xz-libs                 5.4.5-r0               apk     
