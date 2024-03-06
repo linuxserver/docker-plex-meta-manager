@@ -70,7 +70,7 @@ pip                     24.0                   python
 procps-ng               4.0.4-r0               apk                      
 psutil                  5.9.8                  python                   
 pyc                     3.11.8-r0              apk                      
-python-dateutil         2.8.2                  python                   
+python-dateutil         2.9.0.post0            python                   
 python-dotenv           1.0.1                  python                   
 python3                 3.11.8-r0              apk                      
 python3-pyc             3.11.8-r0              apk                      
