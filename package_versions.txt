@@ -89,7 +89,7 @@ skalibs                 2.14.0.1-r0            apk
 smmap                   5.0.1                  python                   
 sqlite-libs             3.44.2-r0              apk                      
 ssl_client              1.36.1-r15             apk                      
-tmdbapis                1.2.7                  python                   
+tmdbapis                1.2.9                  python                   
 tzdata                  2024a-r0               apk                      
 urllib3                 2.2.1                  python                   
 utmps-libs              0.1.2.2-r0             apk                      
