@@ -18,8 +18,8 @@ pipeline {
     GITLAB_NAMESPACE=credentials('gitlab-namespace-id')
     DOCKERHUB_TOKEN=credentials('docker-hub-ci-pat')
     EXT_GIT_BRANCH = 'master'
-    EXT_USER = 'meisnate12'
-    EXT_REPO = 'Plex-Meta-Manager'
+    EXT_USER = 'Kometa-Team'
+    EXT_REPO = 'Kometa'
     BUILD_VERSION_ARG = 'PMM_VERSION'
     LS_USER = 'linuxserver'
     LS_REPO = 'docker-plex-meta-manager'

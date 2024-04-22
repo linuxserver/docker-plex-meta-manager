@@ -298,6 +298,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **22.04.24:** - Update backend to reflect upstream repo rename.
 * **23.12.23:** - Rebase to Alpine 3.19.
 * **10.06.23:** - Rebase to Alpine 3.18, deprecate armhf.
 * **05.03.23:** - Add nightly branch.
