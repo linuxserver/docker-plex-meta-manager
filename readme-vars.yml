@@ -4,7 +4,7 @@
 project_name: plex-meta-manager
 project_url: "https://github.com/Kometa-Team/Kometa"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kometa-banner.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki."
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a powerful tool designed to give you complete control over your media libraries. With {{ project_name|capitalize }}, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_blurb_optional_extras_enabled: false
 

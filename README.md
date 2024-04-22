@@ -39,7 +39,7 @@ Find us at:
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-plex-meta-manager%2Fjob%2Fnightly%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-plex-meta-manager/job/nightly/)
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fplex-meta-manager%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/plex-meta-manager/latest/index.html)
 
-[Plex-meta-manager](https://github.com/Kometa-Team/Kometa) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki.
+[Plex-meta-manager](https://github.com/Kometa-Team/Kometa) is a powerful tool designed to give you complete control over your media libraries. With Plex-meta-manager, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more.
 
 [![plex-meta-manager](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kometa-banner.png)](https://github.com/Kometa-Team/Kometa)
 
