@@ -9,8 +9,8 @@ ls_branch: main
 build_armhf: false
 repo_vars:
   - EXT_GIT_BRANCH = 'master'
-  - EXT_USER = 'meisnate12'
-  - EXT_REPO = 'Plex-Meta-Manager'
+  - EXT_USER = 'Kometa-Team'
+  - EXT_REPO = 'Kometa'
   - BUILD_VERSION_ARG = 'PMM_VERSION'
   - LS_USER = 'linuxserver'
   - LS_REPO = 'docker-plex-meta-manager'
@@ -29,4 +29,4 @@ repo_vars:
   - CI_AUTH=''
   - CI_WEBPATH=''
 sponsor_links:
-  - { name: "Plex-Meta-Manager", url: "https://github.com/sponsors/meisnate12" }
+  - { name: "Kometa", url: "https://github.com/sponsors/meisnate12" }
