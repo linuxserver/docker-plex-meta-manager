@@ -20,7 +20,7 @@ jobs:
           echo "**** External trigger running off of nightly branch. To disable this trigger, set a Github secret named \"PAUSE_EXTERNAL_TRIGGER_PLEX_META_MANAGER_NIGHTLY\". ****"
           echo "External trigger running off of nightly branch. To disable this trigger, set a Github secret named \`PAUSE_EXTERNAL_TRIGGER_PLEX_META_MANAGER_NIGHTLY\`" >> $GITHUB_STEP_SUMMARY
           echo "**** Retrieving external version ****"
-          EXT_RELEASE=$(curl -u "${{ secrets.CR_USER }}:${{ secrets.CR_PAT }}" -sX GET "https://api.github.com/repos/meisnate12/Plex-Meta-Manager/commits/nightly" | jq -r '. | .sha' | cut -c1-8)
+          EXT_RELEASE=$(curl -u "${{ secrets.CR_USER }}:${{ secrets.CR_PAT }}" -sX GET "https://api.github.com/repos/Kometa-Team/Kometa/commits/nightly" | jq -r '. | .sha' | cut -c1-8)
           if [ -z "${EXT_RELEASE}" ] || [ "${EXT_RELEASE}" == "null" ]; then
             echo "**** Can't retrieve external version, exiting ****"
             FAILURE_REASON="Can't retrieve external version for plex-meta-manager branch nightly"
