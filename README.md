@@ -39,9 +39,9 @@ Find us at:
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-plex-meta-manager%2Fjob%2Fmain%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-plex-meta-manager/job/main/)
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fplex-meta-manager%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/plex-meta-manager/latest/index.html)
 
-[Plex-meta-manager](https://github.com/meisnate12/Plex-Meta-Manager) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki.
+[Plex-meta-manager](https://github.com/Kometa-Team/Kometa) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki.
 
-[![plex-meta-manager](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-meta-manager-banner.png)](https://github.com/meisnate12/Plex-Meta-Manager)
+[![plex-meta-manager](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-meta-manager-banner.png)](https://github.com/Kometa-Team/Kometa)
 
 ## Supported Architectures
 
@@ -69,13 +69,13 @@ This image provides various versions that are available via tags. Please read th
 
 ## Application Setup
 
-There is a [walkthrough](https://metamanager.wiki/en/latest/home/guides/docker.html#setting-up-the-initial-config-file) available to help get you up and running.
+There is a [walkthrough](https://kometa.wiki/en/latest/home/guides/docker.html#setting-up-the-initial-config-file) available to help get you up and running.
 
-This image supports all of the environment variables listed [here](https://metamanager.wiki/en/latest/home/environmental.html) and all commandline arguments.
+This image supports all of the environment variables listed [here](https://kometa.wiki/en/latest/home/environmental.html) and all commandline arguments.
 
 To perform a one-time run use `docker run` (or `docker-compose run`) with the `--rm` and `-e PMM_RUN=True` arguments. This will cause the container to process your config immediately instead of waiting for the scheduled time, and delete the old container after completion.
 
-For more information see the [official wiki](https://metamanager.wiki).
+For more information see the [official wiki](https://kometa.wiki).
 
 ## Usage
 
