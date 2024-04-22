@@ -41,7 +41,7 @@ Find us at:
 
 [Plex-meta-manager](https://github.com/Kometa-Team/Kometa) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki.
 
-[![plex-meta-manager](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-meta-manager-banner.png)](https://github.com/Kometa-Team/Kometa)
+[![plex-meta-manager](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kometa-banner.png)](https://github.com/Kometa-Team/Kometa)
 
 ## Supported Architectures
 
