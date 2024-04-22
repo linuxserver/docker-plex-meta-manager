@@ -28,13 +28,13 @@ RUN \
     libxslt \
     python3 && \
   if [ -z ${PMM_VERSION+x} ]; then \
-    PMM_VERSION=$(curl -s "https://api.github.com/repos/meisnate12/Plex-Meta-Manager/commits/develop" \
+    PMM_VERSION=$(curl -s "https://api.github.com/repos/Kometa-Team/Kometa/commits/develop" \
       | jq -r '. | .sha' | cut -c1-8); \
   fi && \
   mkdir -p /app/pmm && \
   curl -o \
     /tmp/pmm.tar.gz -L \
-    "https://github.com/meisnate12/Plex-Meta-Manager/archive/${PMM_VERSION}.tar.gz" && \
+    "https://github.com/Kometa-Team/Kometa/archive/${PMM_VERSION}.tar.gz" && \
   tar xf \
     /tmp/pmm.tar.gz -C \
     /app/pmm --strip-components=1 && \
