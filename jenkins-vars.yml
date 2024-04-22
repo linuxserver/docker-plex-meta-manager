@@ -29,4 +29,4 @@ repo_vars:
   - CI_AUTH=''
   - CI_WEBPATH=''
 sponsor_links:
-  - { name: "Plex-Meta-Manager", url: "https://github.com/sponsors/meisnate12" }
+  - { name: "Kometa", url: "https://github.com/sponsors/meisnate12" }
