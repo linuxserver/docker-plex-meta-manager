@@ -1,6 +1,8 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
+cp /app/pmm/config/config.yml.template /config
+
 # permissions
 lsiown -R abc:abc \
     /config
