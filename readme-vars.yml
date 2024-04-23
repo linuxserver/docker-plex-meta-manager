@@ -4,9 +4,14 @@
 project_name: plex-meta-manager
 project_url: "https://github.com/Kometa-Team/Kometa"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/plex-meta-manager-banner.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a Python 3 script that can be continuously run using YAML configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki."
+project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a powerful tool designed to give you complete control over your media libraries. With {{ project_name|capitalize }}, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_blurb_optional_extras_enabled: false
+
+project_deprecation_status: true
+project_deprecation_message: |
+  Please migrate to our Kometa image instead:
+  https://github.com/linuxserver/docker-kometa
 
 # supported architectures
 available_architectures:
@@ -61,6 +66,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "22.04.24:", desc: "Deprecate."}
   - { date: "22.04.24:", desc: "Update backend to reflect upstream repo rename."}
   - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - { date: "10.06.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
