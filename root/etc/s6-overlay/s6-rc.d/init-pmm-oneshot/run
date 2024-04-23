@@ -23,11 +23,11 @@ if [[ -n "${CONFIG_FILE}" ]] && [[ ! -e "${CONFIG_FILE}" ]]; then
 fi
 
 if { echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--run|-r)([\s]|$)'; } && { echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; }; then
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py "${CLI_OPTIONS[@]}"
+    s6-setuidgid abc python3 /app/pmm/kometa.py "${CLI_OPTIONS[@]}"
 elif echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--run|-r)([\s]|$)'; then
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --config "${CONFIG_FILE}" "${CLI_OPTIONS[@]}"
+    s6-setuidgid abc python3 /app/pmm/kometa.py --config "${CONFIG_FILE}" "${CLI_OPTIONS[@]}"
 elif echo "${CLI_OPTIONS[@]}" | grep -qPo '([\s]|^)(--config|-c)([\s])(.+\/[^\/]+)\.(yml|yaml)'; then
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --run "${CLI_OPTIONS[@]}"
+    s6-setuidgid abc python3 /app/pmm/kometa.py --run "${CLI_OPTIONS[@]}"
 else
-    s6-setuidgid abc python3 /app/pmm/plex_meta_manager.py --run --config "${CONFIG_FILE}" "${CLI_OPTIONS[@]}"
+    s6-setuidgid abc python3 /app/pmm/kometa.py --run --config "${CONFIG_FILE}" "${CLI_OPTIONS[@]}"
 fi
