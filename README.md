@@ -26,6 +26,11 @@ Find us at:
 * [GitHub](https://github.com/linuxserver) - view the source for all of our repositories.
 * [Open Collective](https://opencollective.com/linuxserver) - please consider helping us by either donating or contributing to our budget
 
+# This image is deprecated. We will not offer support for this image and it will not be updated.
+
+Please migrate to our Kometa image instead:
+https://github.com/linuxserver/docker-kometa
+
 # [linuxserver/plex-meta-manager](https://github.com/linuxserver/docker-plex-meta-manager)
 
 [![Scarf.io pulls](https://scarf.sh/installs-badge/linuxserver-ci/linuxserver%2Fplex-meta-manager?color=94398d&label-color=555555&logo-color=ffffff&style=for-the-badge&package-type=docker)](https://scarf.sh/gateway/linuxserver-ci/docker/linuxserver%2Fplex-meta-manager)
@@ -298,6 +303,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **22.04.24:** - Deprecate.
 * **22.04.24:** - Update backend to reflect upstream repo rename.
 * **23.12.23:** - Rebase to Alpine 3.19.
 * **10.06.23:** - Rebase to Alpine 3.18, deprecate armhf.
